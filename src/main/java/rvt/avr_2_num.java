@@ -16,7 +16,7 @@ public class avr_2_num {
         System.out.println("Give the third number:");
         int skaitlis3 = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("The average is " + (((double)skaitlis1 + skaitlis2 + skaitlis3)/3));
+        System.out.println("The average is " + ((double)skaitlis1 + skaitlis2 + skaitlis3)/3);
 
         scanner.close();
 
