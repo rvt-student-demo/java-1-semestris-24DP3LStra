@@ -7,17 +7,17 @@ public class App {
         // Your code goes here...
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Last number? ");
+        int n_number = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Give a number:");
-        int skaitlis1 = Integer.valueOf(scanner.nextLine());
-
-        if (skaitlis1 > 0) {
-            System.out.println("The number is positive.");
-
+        int sum_n = 0;
+        int sumof_n = 0;
+        for (int number = 0; number < n_number; number += 1){
+            sum_n +=1;
+            sumof_n += sum_n;
+            
         }
-        else {
-            System.out.println("The number is negative.");
-        }
+        System.out.println("The sum is "+sumof_n);
         scanner.close();
     }
 }
