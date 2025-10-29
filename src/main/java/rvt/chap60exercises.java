@@ -3,9 +3,9 @@ package rvt;
 public class chap60exercises {
     public static void main(String[] args) {
 
-        ex1();
+        // ex1();
         // ex2();
-        // ex3();
+        ex3();
         // ex4();
         // ex5();
     }
@@ -23,10 +23,10 @@ public class chap60exercises {
     public static void ex2() {
     int[] val = {13, -4, 82, 17}; 
     int[] twice = new int[4];
-    twice[0] = val[0];
-    twice[1] = val[1];
-    twice[2] = val[2];
-    twice[3] = val[3];
+    twice[0] = val[0] *2;
+    twice[1] = val[1] *2;
+    twice[2] = val[2]* 2;
+    twice[3] = val[3]*2;
     
     System.out.println( "Original Array: " 
         + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
@@ -49,10 +49,10 @@ public class chap60exercises {
     int[] sum    = {  0,   0,   0,   0};
 
 
-    sum[0] = valA[0] + valB[0] * 2;
-    sum[1] = valA[1] + valB[1] * 2;
-    sum[2] = valA[2] + valB[2] * 2;
-    sum[3] = valA[3] + valB[3] * 2;
+    sum[0] = valA[0] + valB[0] ;
+    sum[1] = valA[1] + valB[1] ;
+    sum[2] = valA[2] + valB[2];
+    sum[3] = valA[3] + valB[3];
     // Add values from corresponding cells of valA and valB
     // and put the result in the corresponding cell of sum.
 
