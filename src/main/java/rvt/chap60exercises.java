@@ -2,16 +2,25 @@ package rvt;
 
 public class chap60exercises {
     public static void main(String[] args) {
-           int[] val = {0, 1, 2, 3}; 
 
-    int sum = val[0] + val[1] + val[2] + val[3];
- 
-    System.out.println( "Sum of all numbers = " + sum ); 
+        ex1();
+        // ex2();
+        // ex3();
+        // ex4();
+        // ex5();
+    }
+
+    public static void ex1() { 
+
+        int[] val = {0, 1, 2, 3}; 
+
+        int sum = val[0] + val[1] + val[2] + val[3];
+    
+        System.out.println( "Sum of all numbers = " + sum ); 
         
     }
 
-
-    public static void ex1() {
+    public static void ex2() {
     int[] val = {13, -4, 82, 17}; 
     int[] twice = new int[4];
     twice[0] = val[0];
@@ -33,7 +42,7 @@ public class chap60exercises {
     System.out.println( "New Array: " + twice[0] + " " + twice[1] + " " + twice[2] + " " + twice[3] );
         
     }
-    public static void ex2() {
+    public static void ex3() {
         
     int[] valA   = { 13, -22,  82,  17}; 
     int[] valB   = {-12,  24, -79, -13};
@@ -55,7 +64,7 @@ public class chap60exercises {
 
     }
 
-    public static void ex3() {
+    public static void ex4() {
     int[] valA   = { 13, -22,  82,  17}; 
     int[] valB   = {  0,   0,   0,   0};
     
@@ -79,7 +88,7 @@ public class chap60exercises {
         + (valA[2]+valB[2]) + " " + (valA[3]+valB[3]) );
     }
 
-    public static void ex4() {
+    public static void ex5() {
         
     int[] val = {0, 1, 2, 3}; 
     int temp;
@@ -102,5 +111,6 @@ public class chap60exercises {
         + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
 
     }
+    
 
 }
