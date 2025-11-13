@@ -4,20 +4,32 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        // Your code goes here...
-
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Last number? ");
-        int n_number = Integer.valueOf(scanner.nextLine());
 
-        int sum_n = 0;
-        int sumof_n = 0;
-        for (int number = 0; number < n_number; number += 1){
-            sum_n +=1;
-            sumof_n += sum_n;
-            
+        Statistics statistics = new Statistics();
+        Statistics evenStat = new Statistics();
+        Statistics unevenStat = new Statistics();
+
+        System.out.println("Give numbers: ");
+        while(true){
+            int num = Integer.valueOf(scanner.nextLine());
+            if (num == -1) {
+                break;
+            } else {
+                statistics.addNumber(num);
+            }
+
+            if (num%2==0){
+                evenStat.addNumber(num);
+            } else{
+                unevenStat.addNumber(num);
+            }
+
         }
-        System.out.println("The sum is "+sumof_n);
-        scanner.close();
+        System.out.println("Count: " + statistics.getCount());
+        System.out.println("Sum: " + statistics.sum());
+        System.out.println("Average: " + statistics.average());
+        System.out.println("Sum of even numbers: "+ evenStat.sum());
+        System.out.println("Sum of odd numbers: "+unevenStat.sum());
     }
 }
