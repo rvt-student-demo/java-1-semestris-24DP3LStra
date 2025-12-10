@@ -5,7 +5,7 @@ import java.util.*;
 public class Chapter44 {
     public static void main(String[] args){
         //Testejam uzdevumu metodes seit
-        ex7();
+        ex6();
     }
 
     public static void ex1(){
@@ -106,10 +106,46 @@ public class Chapter44 {
         }
     }    
     public static void ex5(){
-        
+        //nepildit, jo nav macits vel
     }    
     public static void ex6(){
-        
+        Scanner scanner = new Scanner(System.in);
+        boolean der = false;
+
+        while (!der) {
+            System.out.println("Enter your password: ");
+            String password = String.valueOf(scanner.nextLine());
+
+            if (password.length()>=7){ //parbauda vai parole ir garaka par 7 simboliem
+                if (!password.equals(password.toUpperCase()) && //parbauda vai paroles vienadas kad tas nomaina uz caps un otradi, ja ir vienadi, tad nav upper case
+                !password.equals(password.toLowerCase())){ // un && - lietots ka AND 
+
+                boolean hasDigit = false;
+
+                for (int i = 0; i < password.length(); i++){
+                        if (Character.isDigit(password.charAt(i))){ // parbaude vai parole ir cipars
+                            hasDigit = true; // ja ir cipars hasDigits parmainas uz true
+                    }
+                }
+
+                if (hasDigit == true) {
+                    der = true;
+                    System.out.println("That password is acceptable."); //ja parole atbilst visiem kriterijiem, tad der = true, citadak parole neder.
+                }
+                else{
+                    System.out.println("That password is not acceptable.");
+                    }
+            }
+            else{
+                System.out.println("That password is not acceptable.");
+
+                }
+        }
+        else {
+            System.out.println("That password is not acceptable.");
+            }
+        }
+
     }    
     public static void ex7(){
         Scanner scanner = new Scanner(System.in);
