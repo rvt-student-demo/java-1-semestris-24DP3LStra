@@ -3,13 +3,36 @@ package rvt;
 import java.util.Scanner;
 
 public class App {
-    public static void main ( String[] args )
-  {
-     Box smallBox = new Box(2.0, 3.0, 4.0);
-        Box bigBox = new Box(5.0, 6.0, 7.0);
+    public static void main ( String[] args ){ 
+        // Skaitītājs ar sākuma vērtību 10
+        overloadedCounter c1 = new overloadedCounter(10);
 
-        System.out.println("Small box nests inside big box? " + smallBox.nests(bigBox));
-        System.out.println("Big box nests inside small box? " + bigBox.nests(smallBox));
+        // Skaitītājs ar vērtību 0
+        overloadedCounter c2 = new overloadedCounter();
+
+        // Darbības ar c1
+        c1.increase();
+        c1.decrease();
+        System.out.println("Counter c1 value: " + c1.value());
+
+        // Darbības ar c2
+        c2.increase();
+        c2.increase();
+        System.out.println("Counter c2 value: " + c2.value());
+    }
+}
+
+
+
+
+
+
+
+    //  Box smallBox = new Box(2.0, 3.0, 4.0);
+    //     Box bigBox = new Box(5.0, 6.0, 7.0);
+
+    //     System.out.println("Small box nests inside big box? " + smallBox.nests(bigBox));
+    //     System.out.println("Big box nests inside small box? " + bigBox.nests(smallBox));
 
                 
         // Student st1 = new Student("Jack");
@@ -30,8 +53,7 @@ public class App {
         // mattsCard.addMoney(50);
         // System.out.println("Matt: "+ mattsCard);
         // }
-    }
-}
+
 
 // System.out.println(st1.name);
 // // st1.group = "DP2-1";
