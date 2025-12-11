@@ -2,7 +2,6 @@ package rvt;
 
 public class overloadedCounter {
 
-    // Privātais lauks, kas glabā skaitītāja vērtību
     private int value;
 
     // Konstruktors ar sākuma vērtību
@@ -10,23 +9,37 @@ public class overloadedCounter {
         this.value = startValue;
     }
 
-    // Konstruktors bez parametriem (sākuma vērtība = 0)
+    // Konstruktors bez parametriem
     public overloadedCounter() {
         this.value = 0;
     }
 
-    // Metode, kas atgriež pašreizējo vērtību
+    //atgriež pašreizējo vērtību
     public int value() {
         return value;
     }
 
-    // Metode, kas palielina vērtību par 1
+    // palielina vērtību par 1
     public void increase() {
         value = value + 1;
     }
 
-    // Metode, kas samazina vērtību par 1
+    //samazina vērtību par 1
     public void decrease() {
         value = value - 1;
+    }
+
+    //palielina vērtību
+    public void increase(int increaseBy) {
+        if (increaseBy >= 0) {
+            value = value + increaseBy;
+        }
+    }
+
+    //samazina vērtību
+    public void decrease(int decreaseBy) {
+        if (decreaseBy >= 0) {
+            value = value - decreaseBy;
+        }
     }
 }

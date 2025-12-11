@@ -4,21 +4,28 @@ import java.util.Scanner;
 
 public class App {
     public static void main ( String[] args ){ 
-        // Skaitītājs ar sākuma vērtību 10
-        overloadedCounter c1 = new overloadedCounter(10);
 
-        // Skaitītājs ar vērtību 0
-        overloadedCounter c2 = new overloadedCounter();
+            overloadedCounter c1 = new overloadedCounter(10);
 
-        // Darbības ar c1
-        c1.increase();
-        c1.decrease();
-        System.out.println("Counter c1 value: " + c1.value());
+            // Palielina par 1
+            c1.increase();
+            System.out.println("Value after increase(): " + c1.value());
 
-        // Darbības ar c2
-        c2.increase();
-        c2.increase();
-        System.out.println("Counter c2 value: " + c2.value());
+            // Palielina par 5
+            c1.increase(5);
+            System.out.println("Value after increase(5): " + c1.value());
+
+            // Samazina par 3
+            c1.decrease(3);
+            System.out.println("Value after decrease(3): " + c1.value());
+
+            //palielina ar negatīvu skaitli
+            c1.increase(-2);
+            System.out.println("Value after increase(-2): " + c1.value());
+
+            //samazina ar negatīvu skaitli
+            c1.decrease(-4);
+            System.out.println("Value after decrease(-4): " + c1.value());
     }
 }
 
