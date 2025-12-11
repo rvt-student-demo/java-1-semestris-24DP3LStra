@@ -3,16 +3,13 @@ package rvt;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main ( String[] args )
+  {
+     Box smallBox = new Box(2.0, 3.0, 4.0);
+        Box bigBox = new Box(5.0, 6.0, 7.0);
 
-        Box box = new Box(2.5, 5.0, 6.0);
-
-        System.out.println("Area: " + box.area() + " volume: " + box.volume());
-
-        System.out.println("length: " + box.length + " height: " + box.height +
-                "width:  " + box.width);
-
-
+        System.out.println("Small box nests inside big box? " + smallBox.nests(bigBox));
+        System.out.println("Big box nests inside small box? " + bigBox.nests(smallBox));
 
                 
         // Student st1 = new Student("Jack");
